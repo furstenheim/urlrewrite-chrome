@@ -79,6 +79,30 @@
 			</button>
 		</td>
 	</tr>
+    <tr>
+        <th>Source URL</th>
+        <th></th>
+        <th>Addition</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="addition in additions">
+		<td>
+			<input placeholder="http://"
+			       ng-model="addition.sourceUrl">
+		</td>
+		<td>→</td>
+		<td>
+			<input placeholder=""
+			       ng-model="addition.addition">
+		</td>
+		<td>
+			<button class="remove"
+			        ng-if="addition != lastMapping()"
+			        ng-click="removeAdditionAt($index)">
+				Remove
+			</button>
+		</td>
+	</tr>
 </table>
 
 <ol class="instructions">
